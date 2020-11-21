@@ -10,6 +10,9 @@ module.exports = {
     contentBase: "./public",
     hot: true,
   },
+  resolve: {
+    extensions: [".ts", ".js"],
+  },
   module: {
     rules: [
       {
