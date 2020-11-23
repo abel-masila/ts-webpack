@@ -1,5 +1,6 @@
 const path = require("path");
 module.exports = {
+  devtool: "eval-source-map",
   entry: "./src/index.ts",
   output: {
     path: path.resolve(__dirname, "public"),
@@ -21,5 +22,10 @@ module.exports = {
         include: [path.resolve(__dirname, "src")],
       },
     ],
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
   },
 };
